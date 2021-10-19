@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Tapak</title>
+</head>
+<body>
+    <div class="contenedorMenu">
+        <div class="contenedorLogoInicio">
+            <a href="index.html">
+            <img src="../imagenes/logoTapak.png" width="80px" height="80px" margin="15px">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="botonMenu">
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="botonMenu">
+                    <a href="productos.html">Productos</a>
+                        <ul>
+                            <li><a href="productos.html#remeraCorta">Remera m/corta</a></li>
+                            <li><a href="productos.html#remeraLarga">Remera m/larga</a></li>
+                            <li><a href="productos.html#musculosaBlusa">Musculosa/blusa</a></li>
+                            <li><a href="productos.html#tops">Tops</a></li>
+                            <li><a href="productos.html#niños">Niños</a></li>
+                            <li><a href="productos.html#bodysBebe">Bodys bebe</a></li>
+                            <li><a href="productos.html#remerones">Remerones</a></li>
+                            <li><a href="productos.html#buzos">Buzos</a></li>
+                            <li><a href="productos.html#camperas">Camperas</a></li>
+                            <li><a href="productos.html#pijamas">Pijamas</a></li>
+                            <li><a href="productos.html#portacosmeticos">Portacosméticos</a></li>
+                            <li><a href="productos.html#barbijos">Barbijos</a></li>
+                        </ul> 
+                </li>
+                <li class="botonMenu">
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li class="botonMenu">
+                    <a href="comoComprar.html">¿Cómo comprar?</a>
+                </li>
+                <li class="botonMenu"> 
+                    <a href="cambios.html">Cambios</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand"></a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                   <!-- <button class="btn btn-outline-success my-2 my-sm-0 bordeBoton" type="submit">Buscar</button> -->
+                </form>
+        </nav>
+        <div class="carrito" onclick="showCart()">
+            <button><img src="../imagenes/logoCarrito.png" width="24px" height="24px"></button> 
+        </div>
+        <div id="contenedor-carrito">
+        </div>
+    </div>
+    <div class="carritoMenu" id="carritoMenu">
+        <div class="carritoHeader">
+            <p>Carrito de Compras</p>
+            <button onclick="hideCart()">x</button>
+        </div>
+        <div class="carritoitems" id="itemCarrito">
+            <template id="item-cart">
+                <div class="product-cart-item">
+                    <div class="container-img-cart">
+                        <img src="">
+                    </div>
+                    <div class="container-item-data">
+                        <p class="title-item-cart"></p>
+                        <p class="price-item-cart"></p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div class="cambios">
+        <div class="contenedorGeneral">
+                <h2>CAMBIOS</h2>
+                    <p>Todas las prendas tienen cambios. Los cambios se realizan únicamente por la misma prenda, sin abonar diferencia de dinero, dentro de los 20 DÍAS CORRIDOS 
+                    de la fecha de entrega. Realizamos cambio en caso de equivocación por parte de nosotros y no por equivocación del cliente en el talle pedido o estampa 
+                    solicitada. Por ese motivo, coordinamos talles e imágenes previo a la entrega de seña.
+                    Para realizar los cambios envíanos un mensaje vía WHATSAPP y coordinamos juntos. Las prendas deben estar sin usar, en excelente estado y en su bolsa 
+                    correspondiente.</p>
+        </div>    
+    </div>
+    </section>
+    <footer>
+        <nav class="footer">
+            <div class="redes">
+                <h1>Redes Sociales</h1>
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/"><img src="../imagenes/logoFb.png" width="20px" height="20px"></a></li>
+                    <li><a target="_blank" href="https://www.twitter.com"><img src="../imagenes/logoTw.png" width="20px" height="20px"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/"><img src="../imagenes/logoIg.png" width="20px" height="20px"></a></li>
+                </ul>
+            </div>
+            <div class="menuFooter">
+                <ul>
+                    <li class="botonMenu">
+                        <a href="sobreNosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="botonMenu">
+                        <a href="ventaMayorista.html">Venta Mayorista</a>
+                    </li>
+                    <li class="botonMenu"> 
+                        <a href="info.html">+ info</a>
+                    </li>
+                </ul>
+            </div>  
+        </nav>
+    </footer>
+    <div class="copy">
+        <p> Copyright &copy; Tapak estampados - 2021. Todos los derechos reservados.</p>   
+        </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>  
+    <script src="../js/bootstrap.js"></script> 
+</body>
+</html>

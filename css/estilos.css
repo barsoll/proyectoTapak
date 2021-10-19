@@ -1,0 +1,808 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px; }
+
+/*---Variables---*/
+/*---Menu---*/
+.contenedorMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .contenedorMenu .navbar {
+    background-color: white !important; }
+  .contenedorMenu .contenedorLogoInicio {
+    margin-left: 15px; }
+  .contenedorMenu .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #dedddd; }
+    .contenedorMenu .menu ul {
+      font-family: "Montserrat", sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .contenedorMenu .menu ul li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+        justify-content: center;
+        list-style: none; }
+      .contenedorMenu .menu ul :hover > ul {
+        display: block; }
+  .contenedorMenu .botonMenu {
+    display: block;
+    margin-left: 20px;
+    float: left;
+    z-index: 1; }
+    .contenedorMenu .botonMenu a {
+      color: #c296d6;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px; }
+    .contenedorMenu .botonMenu a:hover {
+      background-color: #39053a;
+      color: #f4bcff;
+      text-decoration: none;
+      box-shadow: 1px 1px 5px white; }
+  .contenedorMenu li.botonMenu ul {
+    margin-top: 0px;
+    background-color: white;
+    box-shadow: 1px 1px 5px #ccc9c9; }
+    .contenedorMenu li.botonMenu ul li {
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+      padding: 10px; }
+    .contenedorMenu li.botonMenu ul li:hover {
+      background: #39053a;
+      color: #f4bcff; }
+    .contenedorMenu li.botonMenu ul li a:hover {
+      box-shadow: none;
+      background-color: #39053a;
+      color: #f4bcff; }
+  .contenedorMenu .btn-outline-success {
+    color: #c296d6;
+    border-color: #f4bcff; }
+  .contenedorMenu .btn-outline-success:hover {
+    color: #fff;
+    background-color: #f4bcff;
+    border-color: #f4bcff; }
+  .contenedorMenu .btn-outline-success:not(:disabled):not(.disabled):active, .contenedorMenu .btn-outline-success:not(:disabled):not(.disabled).active, .contenedorMenu .show > .btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: #f4bcff;
+    border-color: #f4bcff; }
+  .contenedorMenu .btn-outline-success:not(:disabled):not(.disabled):active:focus, .contenedorMenu .btn-outline-success:not(:disabled):not(.disabled).active:focus, .contenedorMenu .show > .btn-outline-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #ffc0cb87; }
+  .contenedorMenu .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #c296d6;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #f4bcff; }
+
+/*---Carrito---*/
+.carritoMenu {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1;
+  box-shadow: 1px 1px 22px #0000004d;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  transition: all 0.3s ease; }
+
+.carritoMenu.open {
+  right: 0px; }
+
+.carritoMenu .carritoHeader {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #d1d1d1; }
+
+.carritoMenu .carritoHeader p {
+  font-size: 20px;
+  font-weight: 600; }
+
+.carritoMenu .carritoHeader button {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  background: white; }
+
+.carritoitems {
+  float: left;
+  width: 100%; }
+
+.container-img-cart {
+  float: left;
+  width: 40%;
+  margin-right: 10px; }
+
+.carritoitems > div {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d1d1d1;
+  margin-top: 10px; }
+
+.container-img-cart img {
+  width: 100%; }
+
+.container-item-data {
+  float: left;
+  width: calc(60% - 10px);
+  padding-top: 10px; }
+
+.carrito button {
+  border: none !important;
+  background-color: white; }
+
+/*---Banners---*/
+.banners img {
+  width: 100%;
+  margin-top: 5px;
+  height: 700px; }
+
+/*---Categorias Principales---*/
+section.categoriasPrincipales {
+  width: 1080px;
+  display: block;
+  margin: 0 auto;
+  color: #c296d6; }
+  section.categoriasPrincipales .categorias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 5px;
+    width: 100%; }
+    section.categoriasPrincipales .categorias h1 {
+      margin-top: 100px;
+      margin-left: 350px;
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 10px; }
+    section.categoriasPrincipales .categorias ul {
+      display: flex;
+      margin-left: 100px;
+      padding-top: 50px; }
+      section.categoriasPrincipales .categorias ul li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+        justify-content: center;
+        list-style: none; }
+      section.categoriasPrincipales .categorias ul :hover > ul {
+        display: block; }
+    section.categoriasPrincipales .categorias li.menuCategorias ul {
+      margin-top: 0px;
+      background-color: white;
+      box-shadow: 1px 1px 5px #ccc9c9; }
+      section.categoriasPrincipales .categorias li.menuCategorias ul li {
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        padding: 10px; }
+      section.categoriasPrincipales .categorias li.menuCategorias ul li:hover {
+        background: pink;
+        color: white; }
+      section.categoriasPrincipales .categorias li.menuCategorias ul li a:hover {
+        box-shadow: none;
+        background-color: pink;
+        color: white; }
+    section.categoriasPrincipales .categorias .menuC {
+      display: block;
+      margin-left: 20px;
+      float: left;
+      z-index: 1; }
+      section.categoriasPrincipales .categorias .menuC a {
+        color: #ebc8f1;
+        background-color: #39053a;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 1px 1px 5px #f4bcff; }
+
+/*---Catalogo---*/
+section.catalogo {
+  width: 1080px;
+  display: block;
+  margin: 0 auto;
+  color: #c296d6; }
+  section.catalogo h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+  section.catalogo .contenedorCatalogo {
+    background-color: #f5dbfa;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 5px;
+    width: 100%; }
+
+.producto {
+  background-color: white;
+  width: calc(25% - 20px);
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #dadada;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+  .producto img {
+    width: 100%;
+    height: 200px; }
+  .producto h2 {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 20px;
+    text-transform: uppercase; }
+  .producto span {
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: 20px; }
+  .producto .badge-secondary {
+    color: #fff;
+    background-color: #f4bcff !important; }
+
+.producto:hover {
+  transform: scale(1.05);
+  background-color: #f4bcff;
+  color: white;
+  box-shadow: 1px 5px 7px #cacaca; }
+
+/*---Contenedor---*/
+.contenedorGeneral {
+  width: 1080px;
+  display: block;
+  margin: 0 auto; }
+
+/*---Productos---*/
+section.listaProductos {
+  width: 1080px;
+  display: block;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: #c296d6; }
+  section.listaProductos h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+
+.contenedorProductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-left: 5px;
+  width: 100%; }
+
+.producto {
+  background-color: white;
+  width: calc(25% - 20px);
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #dadada;
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .producto img {
+    width: 100%;
+    height: 200px; }
+  .producto p {
+    margin-bottom: 0;
+    font-weight: bold; }
+  .producto .badge-secondary {
+    color: #fff;
+    background-color: #f4bcff !important; }
+  .producto .container-button {
+    display: flex; }
+  .producto button.add-to-cart-button {
+    margin: 7px 3px;
+    border: 1px solid #dadada;
+    width: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 5px 16px; }
+  .producto button:hover {
+    transform: scale(1.05);
+    background-color: #f5dbfa;
+    color: #c296d6;
+    box-shadow: 1px 5px 7px #cacaca; }
+  .producto .btn-comprar {
+    background-color: #c296d6;
+    color: white;
+    border-color: #c296d6; }
+  .producto .btn-ver {
+    background-color: white;
+    color: #c296d6;
+    border-color: #c296d6; }
+
+.producto:hover {
+  transform: scale(1.05);
+  background-color: #f4bcff;
+  color: white;
+  box-shadow: 1px 5px 7px #cacaca; }
+
+.proximamente {
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-left: 450px;
+  text-align: center;
+  border: 1px solid #dadada;
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .proximamente h2 {
+    font-size: 17px;
+    margin-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+.proximamente:hover {
+  transform: scale(1.05);
+  background-color: #f4bcff;
+  color: white;
+  box-shadow: 1px 5px 7px #cacaca; }
+
+/*---Contacto---*/
+.contenedorContacto {
+  background-size: cover;
+  background-color: #f5dbfa;
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 40px; }
+  .contenedorContacto .contenedorGeneral {
+    width: 1080px;
+    display: block;
+    margin: 0 auto; }
+    .contenedorContacto .contenedorGeneral .contedorContactoInner {
+      background: white;
+      box-shadow: 1px 1px 5px #00000057;
+      border-radius: 3px;
+      float: left;
+      width: 100%;
+      padding: 20px; }
+    .contenedorContacto .contenedorGeneral .contactoSectionLeft {
+      float: left;
+      width: 50%; }
+    .contenedorContacto .contenedorGeneral .contactoSectionRight {
+      float: left;
+      width: 50%; }
+    .contenedorContacto .contenedorGeneral .contactoSectionRight article, .contenedorContacto .contenedorGeneral .contactoSectionRight article label, .contenedorContacto .contenedorGeneral .contactoSectionRight article input {
+      float: left;
+      width: 100%;
+      text-align: left; }
+    .contenedorContacto .contenedorGeneral .contactoSectionRight form {
+      width: 100%; }
+
+.contenedorContacto h2 {
+  font-weight: bold;
+  color: #39053a;
+  margin-top: 50px;
+  text-align: center;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+
+.contenedorContacto p {
+  font-weight: bold;
+  color: #39053a;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+
+.contactoRedes ul li {
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 80px;
+  width: 50px;
+  height: 50px; }
+  .contactoRedes ul li a {
+    padding: 0 10px;
+    color: #c296d6;
+    line-height: 30px;
+    font-size: 18px; }
+
+.contactoSectionLeft section.contactoRedes ul {
+  display: flex;
+  flex-direction: column; }
+  .contactoSectionLeft section.contactoRedes ul li {
+    margin-left: 0px;
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    align-items: center; }
+    .contactoSectionLeft section.contactoRedes ul li p {
+      margin-top: 0;
+      margin-left: 10px;
+      margin-bottom: 0; }
+
+.contenedorContacto h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #c296d6;
+  margin-top: 50px;
+  text-align: center;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+
+.contenedorContacto p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #c296d6;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+
+.contactoRedes ul li {
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 80px;
+  width: 50px;
+  height: 50px; }
+  .contactoRedes ul li a {
+    padding: 0 10px;
+    color: #c296d6;
+    line-height: 30px;
+    font-size: 18px; }
+
+.contactoSectionLeft section.contactoRedes ul {
+  display: flex;
+  flex-direction: column; }
+  .contactoSectionLeft section.contactoRedes ul li {
+    margin-left: 0px;
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    align-items: center; }
+    .contactoSectionLeft section.contactoRedes ul li p {
+      margin-top: 0;
+      margin-left: 10px;
+      margin-bottom: 0; }
+
+.formulario h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #39053a;
+  text-align: center;
+  margin-bottom: 50px;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+
+.formulario form {
+  font-family: "Montserrat", sans-serif;
+  color: #c296d6;
+  text-align: end;
+  margin-right: 400px;
+  margin-bottom: 50px;
+  animation-duration: 5s;
+  animation-name: aparecer; }
+  .formulario form .btn.btn-primary {
+    background: #c296d6;
+    border-color: #f4bcff; }
+  .formulario form .btn-primary:hover {
+    color: #fff;
+    background-color: #c296d6 !important;
+    border-color: #f4bcff !important; }
+
+/*---Como comprar---*/
+.compras {
+  background-size: cover;
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 40px; }
+  .compras .contenedorGeneral {
+    width: 1080px;
+    display: block;
+    margin: 0 auto; }
+    .compras .contenedorGeneral h1 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: #c296d6;
+      font-family: "Montserrat", sans-serif;
+      animation-duration: 5s;
+      animation-name: aparecer; }
+    .compras .contenedorGeneral h2 {
+      margin-top: 25px;
+      text-align: center;
+      color: #c296d6;
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      animation-duration: 5s;
+      animation-name: aparecer; }
+    .compras .contenedorGeneral .opciones {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      margin-bottom: 50px;
+      animation-duration: 5s;
+      animation-name: aparecer; }
+      .compras .contenedorGeneral .opciones ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px; }
+        .compras .contenedorGeneral .opciones ul li ul {
+          display: none;
+          position: absolute;
+          min-width: 140px;
+          justify-content: center;
+          list-style: none; }
+        .compras .contenedorGeneral .opciones ul :hover > ul {
+          display: block; }
+      .compras .contenedorGeneral .opciones li.opciones ul {
+        margin-top: 0px;
+        background-color: white;
+        box-shadow: 1px 1px 5px #ccc9c9; }
+        .compras .contenedorGeneral .opciones li.opciones ul li {
+          width: 100%;
+          position: relative;
+          box-sizing: border-box;
+          padding: 10px; }
+        .compras .contenedorGeneral .opciones li.opciones ul li:hover {
+          background: pink;
+          color: white; }
+        .compras .contenedorGeneral .opciones li.opciones ul li a:hover {
+          box-shadow: none;
+          background-color: pink;
+          color: white; }
+      .compras .contenedorGeneral .opciones .botonOp {
+        display: block;
+        margin-top: 25px;
+        margin-left: 20px;
+        float: left;
+        z-index: 1; }
+        .compras .contenedorGeneral .opciones .botonOp button {
+          color: #ebc8f1;
+          background-color: #39053a;
+          text-decoration: none;
+          border-radius: 5px;
+          padding: 10px;
+          box-shadow: 1px 1px 5px #f4bcff; }
+    .compras .contenedorGeneral .lista {
+      font-family: "Montserrat", sans-serif;
+      color: #c296d6;
+      text-align: center;
+      margin-bottom: 50px;
+      animation-duration: 5s;
+      animation-name: aparecer; }
+
+/*---Cambios---*/
+.cambios {
+  background-color: #f5dbfa;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px; }
+  .cambios h2 {
+    color: #c296d6;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+  .cambios p {
+    font-family: "Montserrat", sans-serif;
+    color: #c296d6;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*---Sobre Nosotros---*/
+.nosotros {
+  background-color: #f5dbfa;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px; }
+  .nosotros h2 {
+    color: #c296d6;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+  .nosotros p {
+    font-family: "Montserrat", sans-serif;
+    color: #c296d6;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*---Venta Mayorista---*/
+.ventaMayorista {
+  background-color: #f5dbfa;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px; }
+  .ventaMayorista h2 {
+    color: #c296d6;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+  .ventaMayorista p {
+    font-family: "Montserrat", sans-serif;
+    color: #c296d6;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*---+ info---*/
+.info {
+  background-color: #f5dbfa;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px; }
+  .info h2 {
+    color: #c296d6;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+  .info p {
+    font-family: "Montserrat", sans-serif;
+    color: #c296d6;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*---Footer---*/
+.footer {
+  width: 1080px;
+  display: block;
+  margin: 0 auto;
+  color: #c296d6; }
+  .footer .redes {
+    align-items: center;
+    margin-top: 100px;
+    padding-left: 10px;
+    border-bottom: 1px solid #dedddd; }
+    .footer .redes h1 {
+      font-family: "Montserrat", sans-serif;
+      color: #c296d6;
+      text-align: center;
+      font-size: 15px; }
+    .footer .redes ul {
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      margin-bottom: 15px;
+      margin-top: 15px; }
+      .footer .redes ul li:hover {
+        transform: translate(-3px) scale(1.5);
+        background-color: #39053a;
+        color: #f4bcff;
+        cursor: pointer; }
+        .footer .redes ul li:hover a {
+          background: none; }
+          .footer .redes ul li:hover a i {
+            color: #f4bcff; }
+      .footer .redes ul li {
+        display: inline-block;
+        margin: 0 5px;
+        width: 50px;
+        height: 50px;
+        text-align: center; }
+        .footer .redes ul li a {
+          padding: 0 10px;
+          color: #ffa4e4;
+          line-height: 50px;
+          font-size: 18px; }
+  .footer .menuFooter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative; }
+    .footer .menuFooter ul {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .footer .menuFooter ul li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+        justify-content: center;
+        list-style: none; }
+      .footer .menuFooter ul :hover > ul {
+        display: block; }
+  .footer .botonMenu {
+    display: block;
+    margin-left: 20px;
+    float: left;
+    z-index: 1; }
+    .footer .botonMenu a {
+      color: #c296d6;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px; }
+    .footer .botonMenu a:hover {
+      background-color: #39053a;
+      color: #f4bcff;
+      text-decoration: none;
+      box-shadow: 1px 1px 5px white; }
+
+.copy {
+  text-align: center;
+  color: #39053a;
+  width: 100%;
+  font-size: 15px; }

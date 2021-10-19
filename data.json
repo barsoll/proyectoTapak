@@ -1,0 +1,52 @@
+[
+    {
+      "title" : "Remera manga corta unisex",
+      "price" : 650,
+      "image" : "corta1.jpeg",
+      "id" : 1
+    },
+    {
+        "title" : "Remera manga corta unisex",
+        "price" : 650,
+        "image" : "corta2.jpeg",
+        "id" : 2
+    },
+    {
+        "title" : "Remera manga corta unisex",
+        "price" : 650,
+        "image" : "corta3.jpeg",
+        "id" : 3
+    },
+    {
+        "title" : "Remera manga corta unisex",
+        "price" : 650,
+        "image" : "corta4.jpeg",
+        "id" : 4
+    },
+    {
+        "title" : "Remera manga corta mujer",
+        "price" : 650,
+        "image" : "corta-mujer1.jpeg",
+        "id" : 5
+    },
+    {
+        "title" : "Remera manga corta mujer",
+        "price" : 650,
+        "image" : "corta-mujer2.jpeg",
+        "id" : 6
+    },
+    {
+        "title" : "Remera manga corta mujer",
+        "price" : 650,
+        "image" : "corta-mujer3.jpeg",
+        "id" : 7
+    },
+    {
+        "title" : "Remera manga corta mujer",
+        "price" : 650,
+        "image" : "corta-mujer4.jpeg",
+        "id" : 8
+    }
+]
+
+
