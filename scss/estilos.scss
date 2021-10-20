@@ -70,33 +70,11 @@ $bordes: 1px solid #dedddd;
             padding: 10px;
         }
             a:hover{
-                background-color: $colorFuerte;
-                color: $colorClaro;
+                background-color: $colorMedio;
+                color: $colorExtraClaro;
                 text-decoration: none;
                 box-shadow: 1px 1px 5px white;
             }  
-    }
-    
-    li.botonMenu ul {
-        margin-top: 0px;
-        background-color: white;
-        box-shadow: 1px 1px 5px #ccc9c9;
-    
-        li {
-            width: 100%;
-            position: relative;
-            box-sizing:  border-box;
-            padding: 10px;
-        }
-                li:hover {
-                background: $colorFuerte;
-                color: $colorClaro;
-                }
-                    li a:hover {
-                        box-shadow: none;
-                        background-color: $colorFuerte;
-                        color: $colorClaro;
-                    }
     }
     
     .btn-outline-success {
@@ -134,7 +112,7 @@ $bordes: 1px solid #dedddd;
     top: 0;
     width: 300px;
     height: 100vh;
-    background: white;
+    background: $colorExtraClaro;
     z-index: 1;
     box-shadow: 1px 1px 22px #0000004d;
     box-sizing: border-box;
@@ -155,18 +133,20 @@ $bordes: 1px solid #dedddd;
 }
 
 .carritoMenu .carritoHeader p {
+    color: $colorMedio;
     font-size: 20px;
     font-weight: 600;
 }
 
 .carritoMenu .carritoHeader button{
-    border: 1px solid black;
+    color: $colorMedio;
+    border: 1px solid $colorMedio;
     border-radius: 50%;
     height: 30px;
     width: 30px;
     display: flex;
     justify-content: center;
-    background: white;
+    background: $colorExtraClaro;
 
 }
 
@@ -197,6 +177,7 @@ $bordes: 1px solid #dedddd;
     float: left;
     width: calc(60% - 10px);
     padding-top: 10px;
+    color: $colorMedio;
 }
 
 .carrito button{
@@ -263,38 +244,32 @@ section.categoriasPrincipales {
                 position: relative;
                 box-sizing:  border-box;
                 padding: 10px;
-            }
-                    li:hover {
-                    background: pink;
-                    color: white;
-                    }
-                        li a:hover {
-                            box-shadow: none;
-                            background-color: pink;
-                            color: white;
-                        }
-                        
+            }           
         }
         .menuC {
             display: block;
+            text-transform: uppercase;
             margin-left: 20px;
             float: left;
             z-index: 1;
         
             a{
-                color: #ebc8f1;
-                background-color: $colorFuerte;
+                color: white;
+                background-color: $colorMedio;
                 text-decoration: none;
-                border-radius: 5px;
+                border-radius: 20px;
                 padding: 10px;
-                box-shadow: 1px 1px 5px $colorClaro;
+                box-shadow: 1px 1px 5px $colorClaro; 
             }
+            a:hover{
+                transform: scale(1.05);
+                background-color: #f5dbfa;
+                color: #c296d6;
+                box-shadow: 1px 5px 7px #cacaca;
+            } 
         
         }
     }
-    
-    
-
 }
 
 /*---Catalogo---*/
@@ -366,14 +341,6 @@ section.catalogo {
     background-color: $colorClaro;
     color: white;
     box-shadow: 1px 5px 7px #cacaca;
-}
-
-/*---Contenedor---*/
-
-.contenedorGeneral{
-    width: 1080px;
-    display: block;
-    margin: 0 auto;
 }
 
 /*---Productos---*/
@@ -498,30 +465,73 @@ section.listaProductos {
     box-shadow: 1px 5px 7px #cacaca;
 }
 
-/*---Contacto---*/
+/*---toast---*/
+.custom-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #c296d6b8;
+    border-radius: 5px;
+    padding: 10px 23px;
+    box-sizing: border-box;
+    border: 1px solid;
+    display: none;
+}
 
-.contenedorContacto{
+.custom-toast p {
+    margin: 0px;
+    color: white;
+}
+
+.custom-toast.show {
+    display: block;
+}
+
+/*---Contenedor---*/
+.contenedor{
     background-size:cover;
     background-color: $colorExtraClaro;
     width: 100%;
     display: block;
     float: left;
     padding: 40px;
+    margin-bottom: 20px;
 
     .contenedorGeneral{
         width: 1080px;
         display: block;
         margin: 0 auto;
+    }
+}
+    .contenedor h2 {
+        font-family: $fuentePrincipal;
+        text-transform: uppercase;
+        color: $colorMedio;
+        margin-top: 50px;
+        text-align: center;
+        animation-duration: 5s;
+        animation-name: aparecer;
+    }
+    .contenedor p{
+        font-family: $fuentePrincipal;
+        color: $colorMedio;
+        margin-top: 30px;
+        margin-left:50px;
+        margin-bottom: 10px;
+        animation-duration: 5s;
+        animation-name: aparecer;
+    }
 
-        .contedorContactoInner {
-            background: white;
-            box-shadow: 1px 1px 5px #00000057;
-            border-radius: 3px;
-            float: left;
-            width: 100%;
-            padding: 20px;
-        }
 
+/*---Contacto---*/
+.contedorContactoInner {
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
+    width: 100%;
+    padding: 20px;
+        
         .contactoSectionLeft {
             float: left;
             width: 50%;
@@ -540,26 +550,8 @@ section.listaProductos {
         .contactoSectionRight form {
             width: 100%;
         }
-    }
 }
 
-.contenedorContacto h2 {
-    font-weight: bold;
-    color: $colorFuerte;
-    margin-top: 50px;
-    text-align: center;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-.contenedorContacto p{
-    font-weight: bold;
-    color: $colorFuerte;
-    margin-top: 30px;
-    margin-left:50px;
-    margin-bottom: 10px;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
 .contactoRedes{ 
     
         ul li{
@@ -595,43 +587,6 @@ section.listaProductos {
         margin-bottom: 0;
         }
     }
-}
-
-.contenedorContacto h2 {
-    font-family: $fuentePrincipal;
-    font-weight: bold;
-    color: $colorMedio;
-    margin-top: 50px;
-    text-align: center;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-.contenedorContacto p{
-    font-family: $fuentePrincipal;
-    font-weight: bold;
-    color: $colorMedio;
-    margin-top: 30px;
-    margin-left:50px;
-    margin-bottom: 10px;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-.contactoRedes{ 
-    
-        ul li{
-            display: inline-block;
-            margin-top: 50px;
-            margin-left: 80px;
-            width: 50px;
-            height: 50px;
-            
-            a{
-                padding: 0 10px;
-                color: $colorMedio;
-                line-height: 30px;
-                font-size: 18px;
-            }
-        }  
 }
 
 .contactoSectionLeft section.contactoRedes ul {
@@ -687,257 +642,152 @@ section.listaProductos {
     }
 }   
 
+.modal-header {
+    color: $colorMedio;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: $colorClaro;
+    border-color:$colorClaro;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: $colorMedio;
+    border-color: $colorMedio;
+}
+
 
 /*---Como comprar---*/
-.compras {
-    background-size:cover;
-    width: 100%;
-    display: block;
-    float: left;
-    padding: 40px;
-
-    .contenedorGeneral{
-        width: 1080px;
-        display: block;
-        margin: 0 auto;
-    
-        h1 {
-            margin-top: 100px;
-            text-align: center;
-            font-size: 25px;
-            margin-bottom: 10px;
-            color: $colorMedio;
-            font-family: $fuentePrincipal;
-            animation-duration: 5s;
-            animation-name: aparecer;
-        }
-
-        h2 {
-            margin-top: 25px;
-            text-align: center;
-            color: $colorMedio;
-            font-family: $fuentePrincipal;
-            font-size: 15px;
-            animation-duration: 5s;
-            animation-name: aparecer;
-        }
-    
-        .opciones {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        margin-bottom: 50px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-        
-            ul {
+.opciones {
+            background: white;
+            box-shadow: 1px 1px 5px #00000057;
+            border-radius: 3px;
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px;
             display: flex;
-            justify-content: center;
-            padding-top: 15px;
+            flex-direction: column;
+            animation-duration: 5s;
+            animation-name: aparecer;
         
-                li ul{  
-                display: none;
-                position: absolute;
-                min-width: 140px;
-                justify-content: center;
-                list-style: none;
-                }
-                    :hover > ul {
-                    display: block;
-                    }   
+            h1 {
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 10px;
+                color: $colorMedio;
+                font-family: $fuentePrincipal;
+                animation-duration: 5s;
+                animation-name: aparecer;
             }
 
-            li.opciones ul {
-                margin-top: 0px;
-                background-color: white;
-                box-shadow: 1px 1px 5px #ccc9c9;
-            
-                li {
-                    width: 100%;
-                    position: relative;
-                    box-sizing:  border-box;
-                    padding: 10px;
-                }
-                        li:hover {
-                        background: pink;
-                        color: white;
-                        }
-                            li a:hover {
-                                box-shadow: none;
-                                background-color: pink;
-                                color: white;
-                            }
-                            
-            }
-            .botonOp {
-                display: block;
+            h2 {
                 margin-top: 25px;
-                margin-left: 20px;
-                float: left;
-                z-index: 1;
-            
-                button{
-                    color: #ebc8f1;
-                    background-color: $colorFuerte;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    padding: 10px;
-                    box-shadow: 1px 1px 5px $colorClaro;
-                    }
-                
-            
+                text-align: center;
+                color: $colorMedio;
+                font-family: $fuentePrincipal;
+                font-size: 15px;
+                animation-duration: 5s;
+                animation-name: aparecer;
             }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 15px;
+                list-style: none;
+            
+                    .li {  
+                    display: none;
+                    position: absolute;
+                    min-width: 140px;
+                    }
+                    li img{
+                        width: 150px;
+                        height: 150px;
+                        float: left;
+                        z-index: 1; 
+                        border-radius: 20px;          
+                    }
+                }
         }
 
         .lista{
         font-family: $fuentePrincipal;
         color: $colorMedio; 
-        text-align: center;
-        margin-bottom: 50px;
+        margin-left: 15px;
         animation-duration: 5s;
         animation-name: aparecer;
+        
+            .ol {
+                display: flex;
+                justify-content: start;
+            }
         }
-    }
-}
     
 /*---Cambios---*/
 .cambios{
-    background-color: $colorExtraClaro;
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
     width: 100%;
-    height: 500px;
-    padding-top: 50px;
-
-    h2{
-        color: $colorMedio;
-        text-align: center;
-        font-size: 25px;
-        margin-bottom: 10px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    p{
-        font-family: $fuentePrincipal;
-        color: $colorMedio;
-        font-weight: bold;
-        margin-top: 20px;
-        margin-left: 50px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 5s;
+    animation-name: aparecer;
 }
+
 
 /*---Sobre Nosotros---*/
 
 .nosotros{
-    background-color: $colorExtraClaro;
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
     width: 100%;
-    height: 500px;
-    padding-top: 50px;
-
-    h2{
-        color: $colorMedio;
-        text-align: center;
-        font-size: 25px;
-        margin-bottom: 10px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    p{
-        font-family: $fuentePrincipal;
-        color: $colorMedio;
-        font-weight: bold;
-        margin-top: 20px;
-        margin-left: 50px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 5s;
+    animation-name: aparecer;
 }
 
 /*---Venta Mayorista---*/
 
 .ventaMayorista{
-    background-color: $colorExtraClaro;
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
     width: 100%;
-    height: 500px;
-    padding-top: 50px;
-
-    h2{
-        color: $colorMedio;
-        text-align: center;
-        font-size: 25px;
-        margin-bottom: 10px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    p{
-        font-family: $fuentePrincipal;
-        color: $colorMedio;
-        font-weight: bold;
-        margin-top: 20px;
-        margin-left: 50px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 5s;
+    animation-name: aparecer;
 }
 
 /*---+ info---*/
 
 .info{
-    background-color: $colorExtraClaro;
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
     width: 100%;
-    height: 500px;
-    padding-top: 50px;
-
-    h2{
-        color: $colorMedio;
-        text-align: center;
-        font-size: 25px;
-        margin-bottom: 10px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    p{
-        font-family: $fuentePrincipal;
-        color: $colorMedio;
-        font-weight: bold;
-        margin-top: 20px;
-        margin-left: 50px;
-        animation-duration: 5s;
-        animation-name: aparecer;
-    }
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 5s;
+    animation-name: aparecer;
 }
 
 /*---Footer---*/
@@ -966,18 +816,6 @@ section.listaProductos {
                 margin-bottom: 15px;
                 margin-top: 15px;
 
-                li:hover{
-                    transform: translate(-3px) scale(1.5);
-                    background-color: $colorFuerte;
-                    color: $colorClaro;
-                    cursor: pointer;
-                    a {
-                        background: none;
-                            i {
-                                color: $colorClaro;
-                            }
-                    }
-                } 
                 li{
                     display: inline-block;
                     margin: 0 5px;
@@ -1033,12 +871,12 @@ section.listaProductos {
                 border-radius: 5px;
                 padding: 10px;
             }
-                a:hover{
-                    background-color: $colorFuerte;
-                    color: $colorClaro;
-                    text-decoration: none;
-                    box-shadow: 1px 1px 5px white;
-                }  
+            a:hover{
+                background-color: $colorMedio;
+                color: $colorExtraClaro;
+                text-decoration: none;
+                box-shadow: 1px 1px 5px white;
+            }   
         }
         
     }
@@ -1046,7 +884,8 @@ section.listaProductos {
 
 .copy {
     text-align: center;
-    color: $colorFuerte;
+    font-family: $fuentePrincipal;
+    color: $colorMedio;
     width: 100%;
     font-size: 15px;
 }
